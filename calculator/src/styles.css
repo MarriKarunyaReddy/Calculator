@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    height: 100vh; /* Make the body take up the full height of the viewport */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    background: linear-gradient(to right, #01131c, #5c696f, #e1e5e7); /* Smooth gradient background */
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: repeat(4, 6rem); /* 4 columns, each 6rem wide */
+    grid-template-rows: minmax(4rem, auto); /* Rows are at least 4rem high */
+    gap: 0.5rem; /* Gap between buttons */
+    padding: 1rem;
+    background-color: #333; /* Background color of the calculator */
+    border-radius: 10px; /* Rounded corners for a sleek look */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #444; /* Default button background */
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transition for hover effects */
+}
+
+button:hover, button:focus {
+    background-color: #7e8385; /* Button background on hover/focus */
+    outline: none;
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.output {
+    grid-column: span 4; /* Span the output across all 4 columns */
+    background-color: #222; /* Dark background for the display */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 5px; /* Rounded corners for the display */
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.5); /* Inner shadow for the display */
+    font-size: 2rem; /* Increase font size for better readability */
+    min-height: 3rem; /* Ensure the display has a minimum height */
+}
+
+.span-two {
+    grid-column: span 2; /* Span two columns */
+}
+
+/* Additional styling for specific buttons */
+button.operation {
+    background-color: #6b6363; /* Different color for operation buttons */
+}
+
+button.equals {
+    background-color: #009688; /* Distinct color for the equals button */
+}
+
+button.clear {
+    background-color: #d9534f; /* Distinct color for the clear button */
+}
+
+button.delete {
+    background-color: #f0ad4e; /* Distinct color for the delete button */
+}
